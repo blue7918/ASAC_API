@@ -1,22 +1,34 @@
-import axios from 'axios';
-import { useAsync } from 'react-async';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import MainPage from './Main';
 
-function App() {
-  axios
-    .get(
-      'https://openapi.naver.com/v1/search/movie.json', // 불러올 api 주소
-      {
-        params: { query: '아이언맨' }, // query는 필수값
-        headers: {
-          'X-Naver-Client-Id': process.env.REACT_APP_CLIENT_ID,
-          'X-Naver-Client-Secret': process.env.REACT_APP_CLIENT_SECRET,
-        },
-      }
-    )
-    .then((response) => {
-      console.log('response', response.data.itmes); // 영화 리스트
-    });
-  return <></>;
+// function App() {
+  
+//   return(
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<MainPage/>} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+import React from 'react';
+import {HashRouter, Route} from 'react-router-dom';
+import Home from "./routes/Home";
+import Search from "./routes/Search"
+import Navigation from "./components/Navigation";
+
+
+function App(){
+  return (
+  <HashRouter>
+    <Navigation />
+    <Route path="/" exact={true} component={Home}></Route>
+    <Route path="/search" exact={true} component={Search}></Route>
+  </HashRouter>
+  );
 }
 
 export default App;
