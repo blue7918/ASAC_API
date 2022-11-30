@@ -10,10 +10,10 @@ function getToday(){
   return year + month + day;
 }
 const res = getToday();
-const key = "b3cd82dc32642194c821bc4689509ecc";
+const key = process.env.REACT_APP_CHART_KEY;
 class Chart extends Component {
   state = {};
- 
+  
   componentDidMount() {
     this._getMovies();
   }

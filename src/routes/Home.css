@@ -1,5 +1,6 @@
 body {
-  background-color: #efefef;
+  /* background-color: rgba(1, 16, 44, 0.852); */
+  background-color: rgba(59,82,129,0.95);
 }
 .container {
   height: 100%;

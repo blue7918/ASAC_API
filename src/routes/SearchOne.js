@@ -28,6 +28,8 @@ const SearchOne = () => {
             'X-Naver-Client-Secret': process.env.REACT_APP_CLIENT_SECRET,
           },
         });
+        console.log('search: ' + search);
+        console.log('movies: ' + movies);
         setMovies(items);
         setIsLoading('false');
         // this.setState({ movies: items, isLoading: false });
@@ -35,7 +37,6 @@ const SearchOne = () => {
     } catch (error) {
       console.log(error);
     }
-    console.log('search: ' + search);
   };
 
   useEffect(() => {
