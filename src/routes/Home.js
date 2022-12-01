@@ -3,6 +3,9 @@ import axios from 'axios';
 import Movie from '../components/Movie';
 import './Home.css';
 import Chart from './Chart';
+import Navbar from '../components/Navbar';
+import ButtomWrapper from '../components/first-page/ButtomWrapper';
+// import styled from 'styled-components';
 
 class Home extends React.Component {
   state = {
@@ -34,10 +37,10 @@ class Home extends React.Component {
           </div>
         ) : (
           <div>
+            <Navbar></Navbar>
             <Chart></Chart>
-            <h1>Recommend</h1>
             <div className="movies">
-              {movies.map((movie) => (
+              {/* {movies.map((movie) => (
                 <Movie
                   key={movie.id}
                   id={movie.id}
@@ -48,7 +51,8 @@ class Home extends React.Component {
                   genres={movie.genres}
                   rating={movie.rating}
                 />
-              ))}
+              ))} */}
+              <ButtomWrapper />
             </div>
           </div>
         )}

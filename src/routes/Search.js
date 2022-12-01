@@ -103,8 +103,10 @@
 import React from 'react';
 import axios from 'axios';
 import SearchMovie from '../components/SearchMovie';
+import Navbar from '../components/Navbar';
 import './Home.css';
 import './Search.css';
+
 
 class Search extends React.Component {
   state = {
@@ -161,7 +163,9 @@ class Search extends React.Component {
     const { movies, isLoading } = this.state;
 
     return (
-      <section className="container">
+      <>
+      <Navbar></Navbar>
+      <section className="container searchContainer">
         {isLoading ? (
           <div className="loader">
             <span className="loader__text">Loading..</span>
@@ -170,7 +174,7 @@ class Search extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div>
               <div className="input_div">
-                <h1>영화 검색</h1>
+                <div className='input_search_title'>영화 검색</div>
                 <input
                   className="input_search"
                   type="text"
@@ -197,6 +201,7 @@ class Search extends React.Component {
           </form>
         )}
       </section>
+      </>
     );
   }
 }

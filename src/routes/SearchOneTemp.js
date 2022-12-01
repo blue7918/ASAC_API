@@ -65,8 +65,8 @@ const SearchOneTemp = ({ movieNm }) => {
             </ItemBox>
           ))} */}
           <ItemBox>
-            <div>{movieNm}</div>
             <img src={movies[0].image} />
+            <div>{movieNm}</div>
           </ItemBox>
         </StyledSlider>
       {/* </Container> */}
@@ -119,6 +119,11 @@ const StyledSlider = styled(Slider)`
 
 const ItemBox = styled.div`
 display: flex;
-width: 6rem;
-height: 10rem;
+width: 100px;
+height: 200px;
+`;
+
+const Poster = styled.img`
+width: 40px;
+height: 100px;
 `;

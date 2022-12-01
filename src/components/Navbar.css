@@ -1,0 +1,48 @@
+.barWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 3.125rem;
+  background-color: rgba(59, 82, 129, 0.95);
+  z-index: 2;
+}
+.leftBox {
+  margin-left: 20px;
+}
+.barHome {
+  color: rgba(217, 219, 249, 0.8);
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-top: 9px;
+}
+.barSearch {
+  color: rgba(217, 219, 249, 0.8);
+  width: 1.3625rem;
+  height: 1.3625rem;
+  margin-bottom: 3px;
+  margin-left: 1.3em;
+}
+.barText {
+  font-size: 1.3rem;
+  color: rgba(217, 219, 249, 0.8);
+  font-weight: 600;
+}
+.barProfileBox {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+.barBell {
+  color: rgba(217, 219, 249, 0.8);
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 17px;
+  margin-bottom: 0.33rem;
+}
+.barProfile {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  object-fit: cover;
+}
